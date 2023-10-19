@@ -26,9 +26,10 @@
                 android:layout_marginStart="16dp"
                 android:hint="@string/nombre_prod"
                 android:inputType="text"
-                app:layout_constraintTop_toTopOf="parent"
+                android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/stock_prod"
@@ -37,9 +38,10 @@
                 android:layout_marginStart="16dp"
                 android:hint="@string/stock_prod"
                 android:inputType="number"
-                app:layout_constraintTop_toBottomOf="@+id/nombre_prod"
+                android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_prod" />
 
             <EditText
                 android:id="@+id/valor_prod"
@@ -48,9 +50,10 @@
                 android:layout_marginStart="16dp"
                 android:hint="@string/valor_prod"
                 android:inputType="number"
-                app:layout_constraintTop_toBottomOf="@+id/stock_prod"
+                android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stock_prod" />
 
             <ImageView
                 android:id="@+id/imagen"
@@ -62,7 +65,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/valor_prod"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_weight="1" />
+                />
 
             <Button
                 android:id="@+id/agregar"

@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.Kureikode.sqlite"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.Kureikode.sqlite"
-        minSdk = 24
-        targetSdk = 33
+        minSdk = 31
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

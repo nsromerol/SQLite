@@ -22,22 +22,22 @@ public class Productos {
     }
 
     public Productos(Cursor cursor){
-        id= cursor.getInt(cursor.getColumnIndex(ProductosEntry.ID));
-        nombre_prod=cursor.getString(cursor.getColumnIndex(ProductosEntry.NAME));
-        descripcion= cursor.getString(cursor.getColumnIndex(ProductosEntry.DESCRIPTION));
-        stock =cursor.getInt(cursor.getColumnIndex(ProductosEntry.QUANTITY));
-        valor =cursor.getFloat(cursor.getColumnIndex(ProductosEntry.PRICE));
-        salidas = cursor.getInt(cursor.getColumnIndex(ProductosEntry.OUT));
+        id= cursor.getInt(cursor.getColumnIndexOrThrow(ProductosEntry.ID_PRODUCTO));
+        nombre_prod=cursor.getString(cursor.getColumnIndexOrThrow(ProductosEntry.NOMBRE));
+        descripcion= cursor.getString(cursor.getColumnIndexOrThrow(ProductosEntry.DESCRIPCION));
+        stock =cursor.getInt(cursor.getColumnIndexOrThrow(ProductosEntry.STOCK));
+        valor =cursor.getFloat(cursor.getColumnIndexOrThrow(ProductosEntry.PRECIO));
+        salidas = cursor.getInt(cursor.getColumnIndexOrThrow(ProductosEntry.SALIDAS));
     }
 
     public ContentValues toContentValues() {
         ContentValues Values =new ContentValues();
-        Values.put(ProductosEntry.ID,id);
-        Values.put(ProductosEntry.NAME,nombre_prod);
-        Values.put(ProductosEntry.DESCRIPTION,descripcion);
-        Values.put(ProductosEntry.QUANTITY, stock);
-        Values.put(ProductosEntry.PRICE, valor);
-        Values.put(ProductosEntry.OUT, salidas);
+        Values.put(ProductosEntry.ID_PRODUCTO,id);
+        Values.put(ProductosEntry.NOMBRE,nombre_prod);
+        Values.put(ProductosEntry.DESCRIPCION,descripcion);
+        Values.put(ProductosEntry.STOCK, stock);
+        Values.put(ProductosEntry.PRECIO, valor);
+        Values.put(ProductosEntry.SALIDAS, salidas);
         return Values;
     }
 
